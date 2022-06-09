@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myntra</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/screen.css">
+    <script src="https://kit.fontawesome.com/511efa44c8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="main-containor">
+            <div class="logo-containor">
+                <a href="#"><img src="data:image/jpeg;base64,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" alt=""></a>
+            </div>
+            <div class="text-containor">
+
+
+<!-- //////////////////////////////////////men////////////////////////////////////////// -->
+
+                <div class="men"><button id="men-btn"><a href="#">MEN</a></button>
+                    <div id="MEN-area-containor" class="MEN-area-containor">
+                        <div class="ulcontinor" >
+                            <ul >
+                                <p>Topwear</p>
+                                <a href="#">
+                                    <li>T-Shirts</li>
+                                </a>
+                                <a href="#">
+                                    <li>Casual Shirts</li>
+                                </a>
+                                <a href="#">
+                                    <li>Formal Shirts</li>
+                                </a>
+                                <a href="#">
+                                    <li>Sweatshirts</li>
+                                </a>
+                                <a href="#">
+                                    <li>Sweaters</li>
+                                </a>
+                                <a href="#">
+                                    <li>Jackets</li>
+                                </a>
+                                <a href="#">
+                                    <li>Blazer & Coats</li>
+                                </a>
+                                <a href="#">
+                                    <li>Suits</li>
+                                </a>
+                                <a href="#">
+                                    <li>Rain Jackets</li>
+                                </a>
+                                <hr>
+                                <p>Indian & Festive Wear</p>
+                                <a href="#">
+                                    <li>Kurtas & Kurta Sets</li>
+                                </a>
+                                <a href="#">
+                                    <li>Sherwanis</li>
+                                </a>
+                                <a href="#">
+                                    <li>Nehru Jackets</li>
+                                </a>
+                                <a href="#">
+                                    <li>Dhotis</li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="ulcontinorr">
+                            <ul>
+                                <p>Bottomwear</p>
+                                <a href="#">
+                                    <li>Jeans</li>
+                                </a>
+                                <a href="#">
+                                    <li>Casual Trousers</li>
+                                </a>
+                                <a href="#">
+                                    <li>Formal Trousers</li>
+                                </a>
+                                <a href="#">
+                                    <li>Shorts</li>
+                                </a>
+                                <a href="#">
+                                    <li>Track Pants & Joggers</li>
+                                </a>
+                                <hr>
+                                <p>Innerwear & Sleepwear</p>
+                                <a href="#">
+                                    <li>Briefs & Trunks</li>
+                                </a>
+                                <a href="#">
+                                    <li>Boxers</li>
+                                </a>
+                                <a href="#">
+                                    <li>Vests</li>
+                                </a>
+                                <a href="#">
+                                    <li>Sleepwear & Loungewear</li>
+                                </a>
+                                <a href="#">
+                                    <li>Thermals</li>
+                                </a>
+                                <hr>
+                                <p>Plus Size</p>
+                            </ul>
+                        </div>
+                        <div class="ulcontinor">
+                            <ul>
+                                <p>Footwear</p>
+                                <a href="#">
+                                    <li>Casual Shoes</li>
+                                </a>
+                                <a href="#">
+                                    <li>Sports Shoes</li>
+                                </a>
+                                <a href="#">
+                                    <li>Formal Shoes</li>
+                                </a>
+                                <a href="#">
+                                    <li>Sneakers</li>
+                                </a>
+                                <a href="#">
+                                    <li>Flip Flops</li>
+                                </a>
+                                <a href="#">
+                                    <li>Socks</li>
+                                </a>
+                                <hr>
+                                <p>Personal Care & Grooming</p>
+                                <p>Sunglasses & Frames</p>
+                                <p>Watches</p>
+                            </ul>
+                        </div>
+                        <div class="ulcontinorr">
+                            <ul>
+                                <p>Sports & Active Wear</p>
+                                <a href="#">
+                                    <li> Sports Shoes</li>
+                                </a>
+                                <a href="#">
+                                    <li>Sports Sandals</li>
+                                </a>
+                                <a href="#">
+                                    <li>Active T-Shirts</li>
+                                </a>
+                                <a href="#">
+                                    <li>Active T-Shirts</li>
+                                </a>
+                                <a href="#">
+                                    <li>
+                                        Track Pants & Shorts</li>
+                                </a>
+                                <a href="#">
+                                    <li>Tracksuits</li>
+                                </a>
+                                <a href="#">
+                                    <li>Jackets & Sweatshirts</li>
+                                </a>
+                                <a href="#">
+                                    <li>Sports Accessories</li>
+                                </a>
+                                <a href="#">
+                                    <li>Swimwear</li>
+                                </a>
+                                <hr>
+                                <p>Gadgets</p>
+                                <a href="#">
+                                    <li>Smart Wearables</li>
+                                </a>
+                                <a href="#">
+                                    <li>Fitness Gadgets</li>
+                                </a>
+                                <a href="#">
+                                    <li>Headphones</li>
+                                </a>
+                                <a href="#">
+                                    <li>Speakers</li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="ulcontinor">
+                            <ul>
+                                <p>Fashion Accessories</p>
+                                <a href="#">
+                                    <li> Wallets</li>
+                                </a>
+                                <a href="#">
+                                    <li> Belts</li>
+                                </a>
+                                <a href="#">
+                                    <li>Perfumes & Body Mists</li>
+                                </a>
+                                <a href="#">
+                                    <li>Trimmers</li>
+                                </a>
+                                <a href="#">
+                                    <li> Deodorants</li>
+                                </a>
+                                <a href="#">
+                                    <li> Ties, Cufflinks & Pocket Squares</li>
+                                </a>
+                                <a href="#">
+                                    <li>Accessory Gift Sets</li>
+                                </a>
+                                <a href="#">
+                                    <li> Caps & Hats</li>
+                                </a>
+                                <a href="#">
+                                    <li>Mufflers, Scarves & Gloves</li>
+                                </a>
+                                <a href="#">
+                                    <li> Phone Cases</li>
+                                </a>
+                                <a href="#">
+                                    <li>Rings & Wristwear</li>
+                                </a>
+                                <a href="#">
+                                    <li> Helmets</li>
+                                </a>
+                                <p> Bags & Backpacks</p>
+                                <p>Luggages & Trolleys</p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+<!-- /////////////////////////////////////////////////women/////////////////////////////////////////////////// -->
+
+                <div>
+                    <button id="womenbtn" class="women-btn"><a href="#">WOMEN</a></button>
+                   <div id="womenarea" class="Women-area-containor">
+                    <div class="ulcontinor">
+                        <ul>
+                       <p> Indian & Fusion Wear</p>
+                       <a href="#"><li>Kurtas & Suits</li></a>
+                       <a href="#"><li>Kurtis, Tunics & Tops</li></a>
+                       <a href="#"><li>Sarees</li></a>
+                       <a href="#"><li>Ethnic Wear</li></a>
+                       <a href="#"><li>Leggings, Salwars & Churidars</li></a>
+                       <a href="#"><li>Skirts & Palazzos</li></a>
+                       <a href="#"><li>Dress Materials</li></a>
+                       <a href="#"><li>Lehenga Cholis</li></a>
+                       <a href="#"><li>Dupattas & Shawls</li></a>
+                       <a href="#"><li>Jackets</li></a>
+                       <hr>
+                       <p>Belts, Scarves & More</p>
+                       <p>Watches & Wearables</p>
+                        </ul>
+                    </div>
+                    <div class="ulcontinorr">
+                        <ul>
+                            <p>Western Wear</p>
+                            <a href="#"><li>Dresses</li></a>
+                            <a href="#"><li>Tops</li></a>
+                            <a href="#"><li>Tshirts</li></a>
+                            <a href="#"><li>Jeans</li></a>
+                            <a href="#"><li>Trousers & Capris</li></a>
+                            <a href="#"><li>Shorts & Skirts</li></a>
+                            <a href="#"><li>Co-ords</li></a>
+                            <a href="#"><li>Playsuits</li></a>
+                            <a href="#"><li>Jumpsuits</li></a>
+                            <a href="#"><li>Shrugs</li></a>
+                            <a href="#"><li>Sweaters & Sweatshirts</li></a>
+                            <a href="#"><li>Jackets & Coats</li></a>
+                            <a href="#"><li>Blazers & Waistcoats</li></a>
+                            <hr>
+                            <p>Plus Size</p>
+                        </ul>
+                    </div>
+                    <div class="ulcontinor">
+                        <ul>
+                            <p> Maternity</p>
+                            <p>Sunglasses & Frames</p>
+                            <p>Footwear</p>
+                            <a href="#"><li>Flats</li></a>
+                            <a href="#"><li>Casual Shoes</li></a>
+                            <a href="#"><li>Heels</li></a>
+                            <a href="#"><li>Boots</li></a>
+                            <a href="#"><li>Sports Shoes & Floaters</li></a>
+                            <hr>
+                            <p>Sports & Active Wear</p>
+                            <a href="#"><li>Clothing</li></a>
+                            <a href="#"><li>Footwear</li></a>
+                            <a href="#"><li>Sports Accessories</li></a>
+                            <a href="#"><li>Sports Equipment</li></a>
+                        </ul>
+                    </div>
+                    <div class="ulcontinorr">
+                        <ul>
+                            <p>Lingerie & Sleepwear</p>
+                            <a href="#"><li>Bra</li></a>
+                            <a href="#"><li>Briefs</li></a>
+                            <a href="#"><li>Shapewear</li></a>
+                            <a href="#"><li>Sleepwear & Loungewear</li></a>
+                            <a href="#"><li>Swimwear</li></a>
+                            <a href="#"><li>Camisoles & Thermals</li></a>
+                            <hr>
+                            <p>Beauty & Personal Care</p>
+                            <a href="#"><LI>Makeup</LI></a>
+                            <a href="#"><LI>Skincare</LI></a>
+                            <a href="#"><LI>Premium Beauty</LI></a>
+                            <a href="#"><LI>Lipsticks</LI></a>
+                            <a href="#"><LI>Fragrances</LI></a>
+                        </ul>
+                    </div>
+                    <DIV class="ulcontinor">
+                        <ul>
+                            <p>Gadgets</p>
+                            <A href="#"><li>Smart Wearables</li></A>
+                            <A href="#"><li>Fitness Gadgets</li></A>
+                            <A href="#"><li>Headphones</li></A>
+                            <A href="#"><li>Speakers</li></A>
+                            <hr>
+                            <p>Jewellery</p>
+                            <A href="#"><li>Fashion Jewellery</li></A>
+                            <A href="#"><li>Fine Jewellery</li></A> 
+                            <A href="#"><li>Earrings</li></A>
+                            <hr>
+                            <p>Backpacks</p>
+                            <p>Handbags, Bags & Wallets</p>
+                            <p>Luggages & Trolleys</p>
+                        </ul>
+                    </DIV>
+                   </div>
+                </div>
+
+<!-- ///////////////////////////////////////////////////kid//////////////////////// -->
+
+                <div >
+                    <button id="kidbtn"><a href="#">KIDS</a></button>
+                    <div id="kids-area" class="kids-area-containor">
+                        <div class="ulcontinor">
+                            <ul>
+                                <p> Boys Clothing</p>
+                                <a href="#"><li>T-Shirts</li></a>
+                                <a href="#"><li>Shirts</li></a>
+                                <a href="#"><li>Shorts</li></a>
+                                <a href="#"><li>Jeans</li></a>
+                                <a href="#"><li>Trousers</li></a>
+                                <a href="#"><li>Clothing Sets</li></a>
+                                <a href="#"><li>Ethnic Wear</li></a>
+                                <a href="#"><li>Track Pants & Pyjamas</li></a>
+                                <a href="#"><li>Jacket, Sweater & Sweatshirts</li></a>
+                                <a href="#"><li>Party Wear</li></a>
+                                <a href="#"><li>Innerwear & Thermals</li></a>
+                                <a href="#"><li>Nightwear & Loungewear</li></a>
+                                <a href="#"><li>Value Packs</li></a>
+                            </ul>
+                        </div>
+                        <div class="ulcontinorr">
+                            <ul>
+                                <p> Girls Clothing</p>
+                                <a href="#"><li>Dresses</li></a>
+                                <a href="#"><li>Tops</li></a>
+                                <a href="#"><li>Tshirts</li></a>
+                                <a href="#"><li>Clothing Sets</li></a>
+                                <a href="#"><li>Lehenga choli</li></a>
+                                <a href="#"><li>Kurta Sets</li></a>
+                                <a href="#"><li>Party wear</li></a>
+                                <a href="#"><li>Dungarees & Jumpsuits</li></a>
+                                <a href="#"><li>Skirts & shorts</li></a>
+                                <a href="#"><li>Tights & Leggings</li></a>
+                                <a href="#"><li>Jeans, Trousers & Capris</li></a>
+                                <a href="#"><li>Jacket, Sweater & Sweatshirts</li></a>
+                                <a href="#"><li>Innerwear & Thermals</li></a>
+                                <a href="#"><li>Nightwear & Loungewear</li></a>
+                                <a href="#"><li>Value Packs</li></a>
+                            </ul>
+                        </div>
+                        <div class="ulcontinor">
+                            <ul>
+                                <p>  Footwear</p>
+                                <a href="#"><li>Casual Shoes</li></a>
+                                <a href="#"><li>Flipflops</li></a>
+                                <a href="#"><li>Sports Shoes</li></a>
+                                <a href="#"><li>Flats</li></a>
+                                <a href="#"><li>Sandals</li></a>
+                                <a href="#"><li>Heels</li></a>
+                                <a href="#"><li>School Shoes</li></a>
+                                <a href="#"><li>Socks</li></a>
+                                <hr>
+                                <p> Toys</p>
+                                <a href="#"><li>Learning & Development</li></a>
+                                <a href="#"><li>Activity Toys</li></a>
+                                <a href="#"><li>Soft Toys</li></a>
+                                <a href="#"><li>Action Figure / Play set</li></a>
+                            </ul>
+                        </div>
+                        <div class="ulcontinorr">
+                            <ul>
+                                <p>Infants</p>
+                                <a href="#"><li>Bodysuits</li></a>
+                                <a href="#"><li>Rompers & Sleepsuits</li></a>
+                                <a href="#"><li>Clothing Sets</li></a>
+                                <a href="#"><li>Tshirts & Tops</li></a>
+                                <a href="#"><li>Dresses</li></a>
+                                <a href="#"><li>Bottom wear</li></a>
+                                <a href="#"><li>Winter Wear</li></a>
+                                <a href="#"><li>Innerwear & Sleepwear</li></a>
+                                <a href="#"><li>Infant Care</li></a>
+                                <hr>
+                                <p>Home & Bath</p>
+                                <p>Personal Care</p>
+                            </ul>
+                        </div>
+                        <div class="ulcontinor">
+                            <ul>
+                                <p> Kids Accessories</p>
+                                <a href="#"><li>Bags & Backpacks</li></a>
+                                <a href="#"><li>Watches</li></a>
+                                <a href="#"><li>Jewellery & Hair accessory</li></a>
+                                <a href="#"><li>Sunglasses</li></a>
+                                <a href="#"><li>Masks & Protective Gears</li></a>
+                                <a href="#"><li>Caps & Hats</li></a>
+                                <hr>
+                                <p>Brands</p>
+                                <a href="#"><li>H&M</li></a>
+                                <a href="#"><li>Max Kids</li></a>
+                                <a href="#"><li>Pantaloons</li></a>
+                                <a href="#"><li>United Colors Of Benetton Kids</li></a>
+                                <a href="#"><li>YK</li></a>
+                                <a href="#"><li>U.S. Polo Assn. Kids</li></a>
+                                <a href="#"><li>Mothercare</li></a>
+                                <a href="#"><li>HRX</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+<!-- ///////////////////////////////////////home///////////////////// -->
+
+                <div>
+                    <button id="homebtn"><a href="#">HOME & LIVING</a></button>
+                    <div id="homearea" class="HOME-LIVING-area-containor">
+                        <div class="ulcontinor">
+                            <ul>
+                                <p>Bed Linen & Furnishing</p>
+                                <a href="#"><li>Bed Runners</li></a>
+                                <a href="#"><li>Mattress Protectors</li></a>
+                                <a href="#"><li>Bedsheets</li></a>
+                                <a href="#"><li>Bedding Sets</li></a>
+                                <a href="#"><li>Blankets, Quilts & Dohars</li></a>
+                                <a href="#"><li>Pillows & Pillow Covers</li></a>
+                                <a href="#"><li>Bed Covers</li></a>
+                                <a href="#"><li>Diwan Sets</li></a>
+                                <a href="#"><li>Chair Pads & Covers</li></a>
+                                <a href="#"><li>Sofa Covers</li></a>
+                                <hr>
+                                <p>Flooring</p>
+                                <a href="#"><li>Floor Runners</li></a>
+                                <a href="#"><li>Carpets</li></a>
+                                <a href="#"><li>Floor Mats & Dhurries</li></a>
+                                <a href="#"><li>Door Mats</li></a>
+                            </ul>
+                        </div>
+                        <div class="ulcontinorr">
+                            <ul>
+                                <p> Bath</p>
+                                <a href="#"><li>Bath Towels</li></a>
+                                <a href="#"><li>Hand & Face Towels</li></a>
+                                <a href="#"><li>Beach Towels</li></a>
+                                <a href="#"><li>Towels Set</li></a>
+                                <a href="#"><li>Bath Rugs</li></a>
+                                <a href="#"><li>Bath Robes</li></a>
+                                <a href="#"><li>Bathroom Accessories</li></a>
+                                <a href="#"><li>Shower Curtains</li></a>
+                                <hr>
+                                <p>Lamps & Lighting</p>
+                                <a href="#"><li>Floor Lamps</li></a>
+                                <a href="#"><li>Ceiling Lamps</li></a>
+                                <a href="#"><li>Table Lamps</li></a>
+                                <a href="#"><li>Wall Lamps</li></a>
+                                <a href="#"><li>Outdoor Lamps</li></a>
+                                <a href="#"><li>String Lights</li></a>
+                            </ul>
+                        </div>
+                        <div class="ulcontinor">
+                            <ul>
+                                <p>Home Décor</p>
+                                <a href="#"><li>Plants & Planters</li></a>
+                                <a href="#"><li>Aromas & Candles</li></a>
+                                <a href="#"><li>Clocks</li></a>
+                                <a href="#"><li>Mirrors</li></a>
+                                <a href="#"><li>Wall Décor</li></a>
+                                <a href="#"><li>Festive Decor</li></a>
+                                <a href="#"><li>Pooja Essentials</li></a>
+                                <a href="#"><li>Wall Shelves</li></a>
+                                <a href="#"><li>Fountains</li></a>
+                                <a href="#"><li>Showpieces & Vases</li></a>
+                                <a href="#"><li>Ottoman</li></a>
+                                <hr>
+                                <P>Cushions & Cushion Covers</P>
+                                <p>Curtains</p>                          
+                            </ul>
+                        </div>
+                        <div class="ulcontinorr">
+                            <ul>
+                                <p>Home Gift Sets</p>
+                                <p>Kitchen & Table</p>
+                                <a href="#"><li>Table Runners</li></a>
+                                <a href="#"><li>Dinnerware & Serveware</li></a>
+                                <a href="#"><li>Cups and Mugs</li></a>
+                                <a href="#"><li>Bakeware & Cookware</li></a>
+                                <a href="#"><li>Kitchen Storage & Tools</li></a>
+                                <a href="#"><li>Bar & Drinkware</li></a>
+                                <a href="#"><li>Table Covers & Furnishings</li></a>
+                                <hr>
+                                <p>Storage</p>
+                                <a href="#"><li>Bins</li></a>
+                                <a href="#"><li>Hangers</li></a>
+                                <a href="#"><li>Organisers</li></a>
+                                <a href="#"><li>Hooks & Holders</li></a>
+                                <a href="#"><li>Laundry Bags</li></a>
+                            </ul>
+                        </div>
+                        <div class="ulcontinor">
+                            <ul>
+                                <p> Brands</p>
+                                <a href="#"><li>H&M</li></a>
+                                <a href="#"><li>Marks & Spencer</li></a>
+                                <a href="#"><li>Home Centre</li></a>
+                                <a href="#"><li>Spaces</li></a>
+                                <a href="#"><li>D'Decor</li></a>
+                                <a href="#"><li>Story@Home</li></a>
+                                <a href="#"><li>Pure Home & Living</li></a>
+                                <a href="#"><li>Swayam</li></a>
+                                <a href="#"><li>Raymond Home</li></a>
+                                <a href="#"><li>Maspar</li></a>
+                                <a href="#"><li>Trident</li></a>
+                                <a href="#"><li>Cortina</li></a>
+                                <a href="#"><li>Random</li></a>
+                                <a href="#"><li>Ellementry</li></a>
+                                <a href="#"><li>ROMEE</li></a>
+                                <a href="#"><li>SEJ by Nisha Gupta</li></a>                              
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+<!-- /////////////////////////////////////////beauty//////////////// -->
+
+                <div>
+                    <button id="beautybtn"><a href="#">BEAUTY</a></button>
+                    <div id="beautyarea" class="BEAUTY-area-containor">
+                        <div class="ulcontinor">
+                            <ul >
+                                <p>Makeup</p>
+                                <a href="#"><li>Lipstick</li></a>
+                                <a href="#"><li>Lip Gloss</li></a>
+                                <a href="#"><li>Lip Liner</li></a>
+                                <a href="#"><li>Mascara</li></a>
+                                <a href="#"><li>Eyeliner</li></a>
+                                <a href="#"><li>Kajal</li></a>
+                                <a href="#"><li>Eyeshadow</li></a>
+                                <a href="#"><li>Foundation</li></a>
+                                <a href="#"><li>Primer</li></a>
+                                <a href="#"><li>Concealer</li></a>
+                                <a href="#"><li>Compact</li></a>
+                                <a href="#"><li>Nail Polish</li></a>                              
+                            </ul>
+                        </div>
+                        <div class="ulcontinorr">
+                            <ul>
+                                <p> Skincare, Bath & Body</p>
+                                <a href="#"><li>Face Moisturiser</li></a>
+                                <a href="#"><li>Cleanser</li></a>
+                                <a href="#"><li>Masks & Peel</li></a>
+                                <a href="#"><li>Sunscreen</li></a>
+                                <a href="#"><li>Serum</li></a>
+                                <a href="#"><li>Face Wash</li></a>
+                                <a href="#"><li>Eye Cream</li></a>
+                                <a href="#"><li>Lip Balm</li></a>
+                                <a href="#"><li>Body Lotion</li></a>
+                                <a href="#"><li>Body Wash</li></a>
+                                <a href="#"><li>Body Scrub</li></a>
+                                <a href="#"><li>Hand Cream</li></a>
+                                <hr>
+                                <p>Baby Care</p>
+                                <p>Masks</p>                              
+                            </ul>
+                        </div>
+                        <div class="ulcontinor">
+                            <ul>
+                                <p> Haircare</p>
+                                <a href="#"><li>Shampoo</li></a>
+                                <a href="#"><li>Conditioner</li></a>
+                                <a href="#"><li> Hair Cream</li></a>
+                                <a href="#"><li>Hair Oil</li></a>
+                                <a href="#"><li>Hair Gel</li></a>
+                                <a href="#"><li>Hair Color</li></a>
+                                <a href="#"><li> Hair Serum</li></a>
+                                <a href="#"><li> Hair Accessory</li></a>
+                                <hr>
+                                <p>Fragrances</p>
+                                <a href="#"><li>Perfume</li></a>
+                                <a href="#"><li> Deodorant</li></a>
+                                <a href="#"><li>Body Mist</li></a>.                                 
+                            </ul>
+                        </div>
+                        <div class="ulcontinorr">
+                            <ul>
+                                <p>Appliances</p>
+                                <a href="#"><li>Hair Straightener</li></a>
+                                <a href="#"><li>Hair Dryer</li></a>
+                                <a href="#"><li>Epilator</li></a>
+                                <hr>
+                                <p>Men's Grooming</p>
+                                <a href="#"><li>Trimmers</li></a>
+                                <a href="#"><li>Beard Oil</li></a>
+                                <a href="#"><li>Hair Wax</li></a>
+                                <hr>
+                                <p>Beauty Gift & Makeup Set </p>
+                                <a href="#"><li>Beauty Gift</li></a>
+                                <a href="#"><li>Makeup Kit</li></a>
+                                <hr>
+                                <p>Premium Beauty</p>
+                                <p>Wellness & Hygiene</p>                              
+                            </ul>
+                        </div>
+                        <div class="ulcontinor" >
+                            <ul>
+                                <p>Top Brands</p>
+                                <a href="#"><li>Lakme</li></a>
+                                <a href="#"><li>Maybelline</li></a>
+                                <a href="#"><li>LOreal</li></a>
+                                <a href="#"><li>
+                                    Philips</li></a>
+                                <a href="#"><li>Bath & Body Works</li></a>
+                                <a href="#"><li>THE BODY SHOP</li></a>
+                                <a href="#"><li>Biotique</li></a>
+                                <a href="#"><li>Mamaearth</li></a>
+                                <a href="#"><li>MCaffeine</li></a>
+                                <a href="#"><li>Nivea</li></a>
+                                <a href="#"><li>Lotus Herbals</li></a>
+                                <a href="#"><li>LOreal Professionnel</li></a>
+                                <a href="#"><li>KAMA AYURVEDA</li></a>
+                                <a href="#"><li>M.A.C</li></a>
+                                <a href="#"><li>Forest Essentials</li></a>                           
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+<!-- ////////////////////////////////studio//////////////////// -->
+
+                <div>
+                    <button id="studiobtn"><a href="#">STUDIO<SPAN>NEW</SPAN></a></button>
+                    <div id="studioarea" class="STUDIO-area-containor">
+                        <img src="https://constant.myntassets.com/web/assets/img/studio-logo-new.svg" alt="">
+                        <p>Your daily inspiration for everything fashion</p>
+                        <img class="imgg" src="https://constant.myntassets.com/web/assets/img/sudio-nav-banner.png" alt="">
+                        <div class="EXPLORE"><span>EXPLORE STUDIO<i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="secont-containor">
+                <div class="input-containor">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Search for products,brand and more"/>
+                </div>
+                <div class="logos">
+                    <span id="profie"><a href="#"><i class="fa-solid fa-user"></i><p><span>Profile</span>
+                        <div class="ragistr-form">
+                                <h4>Welcome</h4>
+                                <span>To access account and manage orders</span>
+                                <button class="LOGINSINGUP">LOGIN/SINGUP</button>
+                                <hr>
+                                <ul>
+                                <li><a href="#">Orders</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Myntra Insider <span>New</span></a></li>
+                                <hr>
+                                <li><a href="#">Myntra Credit</a></li>
+                                <li><a href="#">Coupons</a></li>
+                                <li><a href="#">Saved Cards</a></li>
+                                <li><a href="#">Saved Address</a></li>
+                            </ul>
+                        </div>
+                    </p></a></span>
+                    <span><a href="#"><i class="fa-solid fa-heart"></i><p>Wishlist</p></a></span>
+                    <span><a href="#"><i class="fa-solid fa-bag-shopping"></i><p>Bag</p></a></span>
+                </div>
+        </div>
+        </div>
+    </nav>
+    <!-- /////////////////////////////////////////////////main////////////////////////////////////////////////////// -->
+    <main>
+        <section>
+            <div>
+                <img id="imgslider" src=""/>
+            </div>
+            <div class="c">
+                
+                
+                "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/8/c8e64e6b-4e58-45bb-9999-1f323aa7dc601652014311422-Sportswear_Desk.jpg",
+                "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/8/5a2ed72f-ebad-49ac-ac9c-9f74fd3d7cf21652014382130-Backpacks---Luggage_Desk.jpg",
+                "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/8/fc651726-6c39-4ad5-87b0-190d8a0f753b1652014505698-Innerwear_Dk.jpg",
+                "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/8/ba5790ef-6bfe-427c-8b13-739320e1cba11652015668956-Kurtas---Sets_Desk.jpg",
+                "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/8/ba5790ef-6bfe-427c-8b13-739320e1cba11652015668956-Kurtas---Sets_Desk.jpg",
+                "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/8/b83abadd-48d9-4df9-93fa-6a0d090d5ee31652015784857-Trendy-Heels_Desk.jpg",
+                "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/8/1b45434b-03f8-4fd2-a63b-520aa1b9064e1652015899954-Flip-Flops_Desk--1-.jpg",
+                "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/8/1b45434b-03f8-4fd2-a63b-520aa1b9064e1652015899954-Flip-Flops_Desk--1-.jpg",
+                "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/8/c895d896-d387-497a-91d5-c07d7edf4a951652016060104-Wardrobe-Essentials_Desk.jpg",
+                "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/8/ca060c20-3c8d-44d6-b852-beaf3d0cf0a41652028231412-Handbags---Clutches_Desk.jpg",
+              
+                <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/24/c89495bf-c1f3-4c0f-862b-8a3c223d4a561653399091454-Sports---Casual-Shoes_Desk.jpg"" alt="">
+                <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/24/4d15bdb4-50c2-4fac-a90c-76a5b9a022f61653399091429-Travel-Fest_Desktop.jpg" alt="">
+                <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/8/74644e94-624e-4bda-9399-a2d98be825b01652014215365-Flip-Flops_Desk.jpg" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+            <div class="spanbtn-cont">
+                <span id="btn1" class="spanbtn"></span>
+                <span id="btn" class="spanbtn"></span>
+                <span id="btn" class="spanbtn"></span>
+                <span id="btn" class="spanbtn"></span>
+                <span id="btn" class="spanbtn"> </span>
+                <span id="btn" class="spanbtn"></span>
+                <span id="btn" class="spanbtn"></span>
+                <span id="btn" class="spanbtn"></span>
+                <span id="btn" class="spanbtn"></span>
+                <span id="btn" class="spanbtn"></span>
+                <span id="btn" class="spanbtn"></span>
+            </div>
+        </section>
+        <div id class="offer">
+            <div id="btnin" class="tyu">
+                <p>
+                    <i class="fa-solid fa-angle-right"></i>
+                </p>
+                <p
+                >FLAT ₹300 off</p>
+            </div>
+            <div id="odderslider" class="ofer-main-con" >
+                <div class="offer-con">
+                    <div class="ofer-text">
+                        <p>
+                            AVAIL FLAT
+                        </p>
+                        <H1>₹400 OFF</H1><br>
+                        <h1>+ FREE SHIPPING</h1>
+                        <br>
+                        <h5>Coupon Code:MYNTRA300</h5>
+                        <p>
+                            Applicable on your first order
+                        </p>
+                    </div>
+                    <div class="ofer1-img">
+                        <span><img src="https://assets.myntassets.com/assets/images/2022/3/22/5854dfa6-8917-4bf7-bda4-9205261263641647954637370-Desktop-Sidebar---Illustration--2---1-.png"/></span>
+                        <div>
+                            <a href="#">SIGN UP NOW </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="offeroppt">
+                    <span>
+                        <img src="data:image/jpeg;base64,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" alt="">
+                        <h4>Genuine Products</h4>
+                    </span>
+                    <span>
+                        <img src="data:image/jpeg;base64,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" alt="">
+                        <h4>Try & Buy</h4>
+                    </span>
+                    <span>
+                        <img src="https://musclemixes.com/product_images/uploaded_images/easy-returns.gif" alt="">
+                        <h4>Easy Exchanges & Returns</h4>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- ///////////////////////////////////////////////////////////day of the sale///////////////////////////////////////////////////////////////////////// -->
+
+        <section class="daysalesection">
+            <h1>DEAL OF THE DAY</h1>
+            <div id="daysale">
+
+            </div>
+        </section>
+
+<!-- ///////////////////////////////////////////////////////////BEST OF MYNTRA EXCLUSIVE BRANDS/////////////////////////////////////////////// -->
+
+
+        <section class="BRAND">
+            <h1>BEST OF MYNTRA EXCLUSIVE BRANDS</h1>
+            <div id="EXCLUSIVE-BRANDS">
+
+            </div>
+        </section>
+
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <section class="brand-section">
+            <h1>DEALS ON TOP BRANDS</h1>
+            <div id="brandiimg">
+            </div>
+        </section>
+
+
+    <!-- //////////////////////////////////////////////////////////CATEGORIES TO BAG/////////////////////////////////////////////////////// -->
+    
+        <section class="categ">
+            <h1>
+                CATEGORIES TO BAG
+            </h1>
+            <div id="CATEGORIESTOBAG"></div>
+        </section>
+
+    <!-- /////////////////////////////////////////////////// MYNTRALUXE///////////////////////// -->
+
+    <section class="MYNTRALUXE">
+        <h1> MYNTRA LUXE</h1>
+        <div id="MYNTRALUXE">
+
+        </div>
+    </section>
+
+
+    <!-- ////////////////////////////////////////UNMISSABLE THIS SEASON///////////////////////////// -->
+    
+     <section class="UNMISSABLE">
+        <h1>UNMISSABLE THIS SEASON</h1>
+        <div id="UNMISSABLE">
+        </div>
+     </section>
+
+     <!-- ////////////////////////////////////TRENDING OUTFITS BY INFLUENCERS///////////////////////////// -->
+             
+
+     <section class="TRENDING">
+        <h1>TRENDING OUTFITS BY INFLUENCERS</h1>
+        <div id="TRENDING">
+
+        </div>
+     </section>
+
+     <footer>
+        <nav>
+            <div>
+                <ul>
+                    <h4 class="hhhh2">ONLINE SHOPPING</h4>
+                    <a href="#"><li>Men</li></a>
+                    <a href="#"><li>Womwn</li></a>
+                    <a href="#"><li>Kids</li></a>
+                    <a href="#"><li>Home & Living</li></a>
+                    <a href="#"><li>Beauty</li></a>
+                    <a href="#"><li>Gift Card</li></a>
+                    <a href="#"><li>Myntra Insider <span>New</span></li><span>New</span></a>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <h4 class="hhhh2">USEFUL LINKS</h4>
+                    <a href="#"><li>Contact Us</li></a>
+                    <a href="#"><li>FAQ</li></a>
+                    <a href="#"><li>T&C</li></a>
+                    <a href="#"><li>Terms Of Use</li></a>
+                    <a href="#"><li>Track Order</li></a>
+                    <a href="#"><li>Shipping</li></a>
+                    <a href="#"><li>Cancellation</li></a>
+                    <a href="#"><li>Returns</li></a>
+                    <a href="#"><li>Whitehat</li></a>
+                    <a href="#"><li>Blog</li></a>
+                    <a href="#"><li>Careers</li></a>
+                    <a href="#"><li>Privacy policy</li></a>
+                    <a href="#"><li>Site map</li></a>
+                    <a href="#"><li>Corporate Information</li></a>
+                    <a href="#"><li></li></a>
+                    <a href="#"><li></li></a>
+                    <a href="#"><li></li></a>
+                    <a href="#"><li></li></a>
+                </ul>
+            </div>
+            <div class="imgapp">
+                <h4>EXPERIENCE MYNTRA APP ON MOBILE</h4>
+                <div class="imgapp-area">
+                    <img class="img1" src="Https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png" alt="">
+                    <img class="img2" src="Https://constant.myntassets.com/web/assets/img/bc5e11ad-0250-420a-ac71-115a57ca35d51539674178941-apple_store.png" alt="">
+                </div>
+                <div>
+                    <h4>KEEP IN TOUCH</h4>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footimg11">
+                <div class="foot-img">
+                    <img src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png" alt="">
+                    <span><h4>100% ORIGINAL</h4>guarantee for all products at myntra.com</span>                  
+                </div>
+                <div class="foot-img"   >
+                    <img class="foot-img1" src="https://constant.myntassets.com/web/assets/img/ef05d6ec-950a-4d01-bbfa-e8e5af80ffe31574602902427-30days.png" alt="">
+                    <span><h4>Return within 30days</h4>of receiving your order</span>
+                </div>
+            </div>
+           </nav>
+        <article class="POPULAR">
+            <h3>POPULAR SEARCHES <hr class="hrr1">
+            </h3>
+            <div class="poprel">
+            <p>Makeup  Dresses For Girls  T-Shirts  Sandals  Headphones  Babydolls  Blazers For Men  Handbags  Ladies Watches  Bags  Sport Shoes  Reebok Shoes  Puma Shoes  Boxers  Wallets  Tops  Earrings  Fastrack Watches  Kurtis  Nike  Smart Watches  Titan Watches  Designer Blouse  Gowns  Rings  Cricket Shoes  Forever 21  Eye Makeup  Photo Frames  Punjabi Suits  Bikini  Myntra Fashion Show  Lipstick  Saree  Watches  Dresses  Lehenga  Nike Shoes  Goggles  Bras  Suit  Chinos  Shoes  Adidas Shoes  Woodland Shoes  Jewellery  Designers Sarees</p>
+        </div>
+            <div class="poppp">
+                <p>In case of any concern,<a href="#"> Contact Us</a></p>
+                <p>© 2022 www.myntra.com. All rights reserved.</p>
+         </div>
+        </article>
+        <hr class="hrr2">
+        <article class="Registered">
+            <div>
+                <h4>Registered Office Address</h4>
+                <div>
+              <p>Buildings Alyssa,</p>
+              <p>
+                Begonia and Clover situated in Embassy Tech Village,</p>
+              <p>Outer Ring Road,</p>
+              <p>Devarabeesanahalli Village,</p>
+              <p>Varthur Hobli,</p>
+              <p>Bengaluru – 560103, India</p>
+              </div>
+            </div>
+            <div>
+                <p>CIN: U72300KA2007PTC041799</p>
+                <p>Telephone: +91-80-6********</p>
+            </div>
+        </article>
+        <hr class="hrr3">
+        <article class="ONLINE">
+           <div class="best1">
+            <h4>ONLINE SHOPPING MADE EASY AT MYNTRA</h4>
+            <p>If you would like to experience the best of online shopping for men, women and kids in India, you are at the right place. Myntra is the ultimate destination for fashion and lifestyle, being host to a wide array of merchandise including clothing, footwear, accessories, jewellery, personal care products and more. It is time to redefine your style statement with our treasure-trove of trendy items. Our online store brings you the latest in designer products straight out of fashion houses. You can shop online at Myntra from the comfort of your home and get your favourites delivered right to your doorstep.</p>
+           </div>
+           <div class="best2">
+            <h4>BEST ONLINE SHOPPING SITE IN INDIA FOR FASHION</h4>
+            <p>Be it clothing, footwear or accessories, Myntra offers you the ideal combination of fashion and functionality for men, women and kids. You will realise that the sky is the limit when it comes to the types of outfits that you can purchase for different occasions.</p>
+            <ol>
+                <li><h4>Smart men’s clothing</h4> - At Myntra you will find myriad options in smart formal shirts and trousers, cool T-shirts and jeans, or kurta and pyjama combinations for men. Wear your attitude with printed T-shirts. Create the back-to-campus vibe with varsity T-shirts and distressed jeans. Be it gingham, buffalo, or window-pane style, checked shirts are unbeatably smart. Team them up with chinos, cuffed jeans or cropped trousers for a smart casual look. Opt for a stylish layered look with biker jackets. Head out in cloudy weather with courage in water-resistant jackets. Browse through our innerwear section to find supportive garments which would keep you confident in any outfit.</li>
+                <li><h4>Trendy women’s clothing </h4> Online shopping for women at Myntra is a mood-elevating experience. Look hip and stay comfortable with chinos and printed shorts this summer. Look hot on your date dressed in a little black dress, or opt for red dresses for a sassy vibe. Striped dresses and T-shirts represent the classic spirit of nautical fashion. Choose your favourites from among Bardot, off-shoulder, shirt-style, blouson, embroidered and peplum tops, to name a few. Team them up with skinny-fit jeans, skirts or palazzos. Kurtis and jeans make the perfect fusion-wear combination for the cool urbanite. Our grand sarees and lehenga-choli selections are perfect to make an impression at big social events such as weddings. Our salwar-kameez sets, kurtas and Patiala suits make comfortable options for regular wear.</li>
+                <li><h4>Fashionable footwear</h4> - While clothes maketh the man, the type of footwear you wear reflects your personality. We bring you an exhaustive lineup of options in casual shoes for men, such as sneakers and loafers. Make a power statement at work dressed in brogues and oxfords. Practice for your marathon with running shoes for men and women. Choose shoes for individual games such as tennis, football, basketball, and the like. Or step into the casual style and comfort offered by sandals, sliders, and flip-flops. Explore our lineup of fashionable footwear for ladies, including pumps, heeled boots, wedge-heels, and pencil-heels. Or enjoy the best of comfort and style with embellished and metallic flats.</li>
+                <li><h4>Stylish accessories</h4> - Myntra is one of the best online shopping sites for classy accessories that perfectly complement your outfits. You can select smart analogue or digital watches and match them up with belts and ties. Pick up spacious bags, backpacks, and wallets to store your essentials in style. Whether you prefer minimal jewellery or grand and sparkling pieces, our online jewellery collection offers you many impressive options.</li>
+                <li><h4>Fun and frolic</h4> - Online shopping for kids at Myntra is a complete joy. Your little princess is going to love the wide variety of pretty dresses, ballerina shoes, headbands and clips. Delight your son by picking up sports shoes, superhero T-shirts, football jerseys and much more from our online store. Check out our lineup of toys with which you can create memories to cherish.</li>
+                <li><h4>Beauty begins here </h4>- You can also refresh, rejuvenate and reveal beautiful skin with personal care, beauty and grooming products from Myntra. Our soaps, shower gels, skin care creams, lotions and other ayurvedic products are specially formulated to reduce the effect of aging and offer the ideal cleansing experience. Keep your scalp clean and your hair uber-stylish with shampoos and hair care products. Choose makeup to enhance your natural beauty.</li>
+                <p>Myntra is one of the best online shopping sites in India which could help transform your living spaces completely. Add colour and personality to your bedrooms with bed linen and curtains. Use smart tableware to impress your guest. Wall decor, clocks, photo frames and artificial plants are sure to breathe life into any corner of your home.</p>
+            </ol>
+           </div>
+        </article>
+    </footer>
+
+</main>
+     <script src="/style.js"></script>
+</body>
+
+</html>
